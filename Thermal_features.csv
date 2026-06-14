@@ -1,0 +1,8 @@
+﻿image_id,tank_id,capture_datetime,file_name,image_path,min_temp,max_temp,e,avg_brightness,thermal_range,hotspot_ratio,vertical_gradient,thermal_uniformity,notes
+1,WT11,2026-05-05 23:50:00,WT11_20260505_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260505_1200.jpg.jpg""",22,64,0.96,140.8340041,252,0.067778317,36.19652112,53.61055608,
+2,WT11,2026-05-06 23:50:00,WT11_20260506_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260506_1200.jpg.jpg""",0,63,0.97,153.9362255,247,0.003873501,37.27081048,41.19435135,
+3,WT11,2026-05-07 23:50:00,WT11_20260507_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260507_1200.jpg.jpg""",20,63,0.97,132.653236,253,0.104137924,79.41805793,76.72017901,
+4,WT11,2026-05-08 23:50:00,WT11_20260508_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260508_1200.jpg.jpg""",21,62,0.97,126.680473,251,0.023334049,45.06926877,68.93845856,
+5,WT11,2026-05-09 23:50:00,WT11_20260509_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260509_1200.jpg.jpg""",18,64,0.97,135.0243371,241,0.000780613,61.112813,66.65074001,
+6,WT11,2026-05-10 23:50:00,WT11_20260510_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260510_1200.jpg.jpg""",22,61,0.97,120.4645242,246,0.002942915,51.09539914,65.1286696,
+7,WT11,2026-05-11 23:50:00,WT11_20260511_1200.jpg.jpg,"""C:\Users\lenovo\OneDrive\Desktop\WashTank_AI_Project\Thermal1_Images\WT11_20260511_1200.jpg.jpg""",28,64,0.97,40.17350344,253,0.003890864,33.00941239,69.36656361,

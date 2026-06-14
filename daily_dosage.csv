@@ -1,0 +1,8 @@
+﻿dosage_id,tank_id,date,chemical_name,daily_dosage,unit,injection_point,notes
+1,WT11,2026-05-05 ,demulsifier BH-1036,223,ppm,inlet of slug catcher,
+2,WT11,2026-05-06 ,demulsifier BH-1036,232,ppm,inlet of slug catcher,
+3,WT11,2026-05-07 ,demulsifier BH-1036,233,ppm,inlet of slug catcher,
+4,WT11,2026-05-08 ,demulsifier BH-1036,235,ppm,inlet of slug catcher,
+5,WT11,2026-05-09 ,demulsifier BH-1036,235,ppm,inlet of slug catcher,
+6,WT11,2026-05-10 ,demulsifier BH-1036,235,ppm,inlet of slug catcher,
+7,WT11,2026-05-11 ,demulsifier BH-1036,235,ppm,inlet of slug catcher,

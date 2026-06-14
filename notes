@@ -1,0 +1,163 @@
+with center_col:
+
+    st.header("Tank Simulation")
+
+    if prediction is not None:
+
+        import matplotlib.pyplot as plt
+        from matplotlib.patches import Rectangle
+        from matplotlib.patches import Arc
+
+        tank_height = 14.6
+
+        # تحويل Level من mm إلى m
+        level_m = level / 1000
+
+        interface_height = prediction
+
+        oil_height = level_m - interface_height
+
+        if oil_height < 0:
+            oil_height = 0
+
+        fig, ax = plt.subplots(figsize=(4,8))
+
+        tank_width = 10
+
+        # =====================
+        # رسم جسم الخزان
+        # =====================
+
+        ax.plot(
+            [0,0],
+            [0,tank_height],
+            color="black",
+            linewidth=3
+        )
+
+        ax.plot(
+            [tank_width,tank_width],
+            [0,tank_height],
+            color="black",
+            linewidth=3
+        )
+
+        ax.plot(
+            [0,tank_width],
+            [0,0],
+            color="black",
+            linewidth=3
+        )
+
+        ax.plot(
+            [0,tank_width],
+            [tank_height,tank_height],
+            color="black",
+            linewidth=3
+        )
+
+        # =====================
+        # السقف المقبب
+        # =====================
+
+        roof = Arc(
+            (tank_width/2, tank_height),
+            width=tank_width,
+            height=4,
+            theta1=0,
+            theta2=180,
+            linewidth=3,
+            color="black"
+        )
+
+        ax.add_patch(roof)
+
+        # =====================
+        # منطقة النفط
+        # =====================
+
+        oil_rect = Rectangle(
+            (0, interface_height),
+            tank_width,
+            oil_height,
+            facecolor="black"
+        )
+
+        ax.add_patch(oil_rect)
+
+        # =====================
+        # منطقة الماء + الإيمولشن
+        # =====================
+
+        lower_rect = Rectangle(
+            (0, 0),
+            tank_width,
+            interface_height,
+            facecolor="#d9a15b"
+        )
+
+        ax.add_patch(lower_rect)
+
+        # =====================
+        # خط الواجهة
+        # =====================
+
+        ax.hlines(
+            interface_height,
+            0,
+            tank_width,
+            colors="yellow",
+            linestyles="dashed",
+            linewidth=3
+        )
+
+        # =====================
+        # النصوص
+        # =====================
+
+        ax.text(
+            tank_width/2,
+            interface_height/2,
+            f"Interface\n{interface_height:.2f} m",
+            ha="center",
+            va="center",
+            fontsize=9,
+            fontweight="bold"
+        )
+
+        ax.text(
+            tank_width/2,
+            interface_height + oil_height/2,
+            f"Oil\n{oil_height:.2f} m",
+            ha="center",
+            va="center",
+            fontsize=9,
+            color="white",
+            fontweight="bold"
+        )
+
+        # =====================
+        # المحاور
+        # =====================
+
+        ax.set_ylim(0, 17)
+
+        ax.set_xlim(-1, 11)
+
+        ax.set_ylabel("Height (m)")
+
+        ax.set_title("Wash Tank")
+
+        st.pyplot(fig)
+
+        st.info(
+            f"Total Liquid Level = {level_m:.2f} m"
+        )
+
+        st.warning(
+            f"Emulsion Interface = {interface_height:.2f} m"
+        )
+
+        st.success(
+            f"Oil Layer = {oil_height:.2f} m"
+        )
